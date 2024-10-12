@@ -3,6 +3,8 @@ import express, { Express } from "express";
 
 import bullBoardAdapter from "./config/bullBoardConfig";
 import serverConfig from "./config/serverConfig";
+// import runCpp from "./containers/runCpp";
+//import submissionQueueProducer from "./producers/submissionQueueProducer";
 import apiRouter from "./routes";
 import { submission_queue } from "./utils/constants";
 import SampleWorker from "./workers/SampleWorker";
@@ -60,13 +62,19 @@ app.listen(serverConfig.PORT, () => {
 // const inputCase = `10
 // `;
 
+// const usercodepy= `
+// i=10;
+// print(i)`;
+// const codepy=`
+// ${usercodepy}`;
+
 // submissionQueueProducer({"1234": {
-//   language: "CPP",
+//   language: "PYTHON",
 //   inputCase,
-//   code
+//   codepy
 // }});
 
   
-//   runCpp(code, inputCase);
+  // runCpp(code, inputCase);
 
 });

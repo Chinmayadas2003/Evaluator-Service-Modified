@@ -49,8 +49,12 @@ class JavaExecutor implements CodeExecutorStrategy {
             const codeResponse : string = await this.fetchDecodedStream(loggerStream, rawLogBuffer);
 
             if(codeResponse.trim() === outputCase.trim()) {
+                console.log(codeResponse,"output response");
+                console.log(outputCase,"input response");
                 return {output: codeResponse, status: "SUCCESS"};
             } else {
+                console.log(codeResponse,"output response");
+                console.log(outputCase,"input response");
                 return {output: codeResponse, status: "WA"};
             }
 
